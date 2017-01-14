@@ -1,0 +1,37 @@
+﻿namespace PBC_FDTD_2D
+{
+    public class Field
+    {
+        public double[,] x;
+        public double[,] y;
+        public double[,] z;
+
+        public int XCells { get; private set; }
+        public int YCells { get; private set; }
+
+        public Field(int xNoOfCells, int yNoOfCells)
+        {
+            XCells = xNoOfCells;
+            YCells = yNoOfCells;
+
+            x = new double[XCells, YCells];
+            y = new double[XCells, YCells];
+            z = new double[XCells, YCells];
+
+            InitialiseFieldWithZeros();
+        }
+
+        private void InitialiseFieldWithZeros()
+        {
+            for (int xIndex = 0; xIndex < XCells; xIndex++)
+            {
+                for (int yIndex = 0; yIndex < YCells; yIndex++)
+                {
+                    x[xIndex, yIndex] = 0.0;
+                    y[xIndex, yIndex] = 0.0;
+                    z[xIndex, yIndex] = 0.0;
+                }
+            }
+        }
+    }
+}
