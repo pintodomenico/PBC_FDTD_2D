@@ -5,10 +5,10 @@ namespace PBC_FDTD_2D
     public class Detector
     {
         public double[] timeVariation;
-        public double X { get; private set; }
-        public double Y { get; private set; }
-        public int Index1 { get; private set; }
-        public int Index2 { get; private set; }
+        public double X { get; }
+        public double Y { get; }
+        public int Index1 { get; }
+        public int Index2 { get; }
 
         #region Constructors
         public Detector(int numberOfSamples, double xPosition, double yPosition, double deltaX, double deltaY)

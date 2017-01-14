@@ -41,6 +41,5 @@
         /// femto
         /// </summary>
         public static double f = 1e-15;
-
     }
 }

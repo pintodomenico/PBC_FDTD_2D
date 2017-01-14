@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using static System.Math;
 
 namespace PBC_FDTD_2D
 {
@@ -36,8 +32,8 @@ namespace PBC_FDTD_2D
             for (int t = 0; t < timeSteps; t++)
             {
                 double time = t*deltaT;
-                double sinTerm = Math.Sin(2.0 * Math.PI * centralFrequency * time);
-                double expTerm = Math.Exp(-Math.Pow((time - timeDelay) / timeWidth, 2.0));
+                double sinTerm = Sin(2.0 * PI * centralFrequency * time);
+                double expTerm = Exp(-Pow((time - timeDelay) / timeWidth, 2.0));
                 TimeVariation[t] = sinTerm*expTerm;
             }
         }

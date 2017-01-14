@@ -6,13 +6,13 @@
         public double[,] y;
         public double[,] z;
 
-        public int XCells { get; private set; }
-        public int YCells { get; private set; }
+        public int XCells { get; }
+        public int YCells { get;  }
 
-        public Field(int xNoOfCells, int yNoOfCells)
+        public Field(int xCells, int yCells)
         {
-            XCells = xNoOfCells;
-            YCells = yNoOfCells;
+            XCells = xCells;
+            YCells = yCells;
 
             x = new double[XCells, YCells];
             y = new double[XCells, YCells];
