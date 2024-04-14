@@ -1,14 +1,13 @@
-﻿namespace PBC_FDTD_2D
-{
-    public class ComplexField
-    {
-        public Field real;
-        public Field imag;
+﻿namespace PBC_FDTD_2D;
 
-        public ComplexField(int xNoOfCells, int yNoOfCells)
-        {
-            real = new Field(xNoOfCells, yNoOfCells);
-            imag = new Field(xNoOfCells, yNoOfCells);
-        }
+public class ComplexField
+{
+    public Field real;
+    public Field imag;
+
+    public ComplexField(int xNoOfCells, int yNoOfCells)
+    {
+        real = new Field(xNoOfCells, yNoOfCells);
+        imag = new Field(xNoOfCells, yNoOfCells);
     }
 }
